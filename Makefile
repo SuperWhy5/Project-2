@@ -7,8 +7,8 @@ all: $(PROGRAM)
 run: $(PROGRAM)
 	./$(PROGRAM)
 
-$(PROGRAM): main.out QA.cpp buildResultString.cpp 
-	$(COMPILER) $(OPTIONS) main.out QA.cpp buildResultString.cpp -o $(PROGRAM)
+$(PROGRAM): main.cpp QA.cpp buildResultString.cpp 
+	$(COMPILER) $(OPTIONS) main.cpp QA.cpp buildResultString.cpp -o $(PROGRAM)
 
 clean:
 	rm * .out
