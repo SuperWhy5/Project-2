@@ -5,7 +5,7 @@ int QA::score;
 
 QA::QA(){}
 
-QA::QA(std::string q, std::string a) : question(a), answer(a) {}
+QA::QA(std::string q, std::string a) : question(q), answer(a) {}
 
 std::string QA::getQuestion(){
     return question;
@@ -39,9 +39,9 @@ int QA::letterCount(){
 
 void QA::updateScore(int val){
 
-    score += val;
+    QA::score += val;
 
-    if(score < 0){
-        score = 0;
+    if(QA::score < 0){
+        QA::score = 0;
     }
 }
